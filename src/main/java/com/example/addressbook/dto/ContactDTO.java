@@ -4,15 +4,17 @@ public class ContactDTO {
     private String name;
     private String email;
     private String phone;
+    private String address;
 
     // Default constructor
     public ContactDTO() {}
 
     // Parameterized constructor
-    public ContactDTO(String name, String email, String phone) {
+    public ContactDTO(String name, String email, String phone, String address) {
         this.name = name;
         this.email = email;
         this.phone = phone;
+        this.address = address;
     }
 
     // Getter method for name
@@ -44,4 +46,17 @@ public class ContactDTO {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    // Getter method for address
+    public String getAddress() {
+        return address;
+    }
+
+    // Setter method for address
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+
+
 }

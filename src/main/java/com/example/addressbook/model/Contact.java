@@ -13,15 +13,18 @@ public class Contact {
     private String name;
     private String email;
     private String phone;
+    private String address;
 
     // Default constructor
     public Contact() {}
 
     // Constructor with fields
-    public Contact(String name, String email, String phone) {
+    public Contact(Long id, String name, String email, String phone, String address) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
+        this.address = address;
     }
 
     // **New constructor to accept ContactDTO**
@@ -29,6 +32,7 @@ public class Contact {
         this.name = contactDTO.getName();
         this.email = contactDTO.getEmail();
         this.phone = contactDTO.getPhone();
+        this.address = contactDTO.getAddress();
     }
 
     // Getters and Setters
@@ -62,5 +66,13 @@ public class Contact {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
